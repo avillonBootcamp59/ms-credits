@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ms-credits
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

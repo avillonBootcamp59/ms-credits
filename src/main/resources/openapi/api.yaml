@@ -1,0 +1,174 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8083
+  description: Generated server url
+tags:
+- name: Credit API
+  description: Gestión de créditos bancarios
+paths:
+  /v1.0/credits/{id}:
+    get:
+      tags:
+      - Credit API
+      summary: Obtener un crédito por ID
+      operationId: getCreditById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+    put:
+      tags:
+      - Credit API
+      summary: Actualizar el monto de un crédito
+      description: Modifica el monto de un crédito
+      operationId: updateCredit
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: number
+              format: double
+        required: true
+      responses:
+        "200":
+          description: Monto de crédito actualizado correctamente
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+        "500":
+          description: Error interno del servidor
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+        "404":
+          description: Crédito no encontrada
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+    delete:
+      tags:
+      - Credit API
+      summary: Eliminar un crédito
+      description: Elimina una crédito del sistema
+      operationId: deleteCredit
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Crédito eliminada exitosamente
+        "500":
+          description: Error interno del servidor
+        "404":
+          description: Crédito no encontrada
+  /v1.0/credits:
+    get:
+      tags:
+      - Credit API
+      summary: Obtener todos los créditos
+      description: Lista todos los créditos otorgados por el banco
+      operationId: getAllCredits
+      responses:
+        "500":
+          description: Error interno del servidor
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Credit'
+        "200":
+          description: Lista de créditos obtenida correctamente
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Credit'
+    post:
+      tags:
+      - Credit API
+      summary: Registrar un nuevo crédito
+      description: Registra un nuevo crédito en el sistema
+      operationId: createCredit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Credit'
+        required: true
+      responses:
+        "201":
+          description: Crédito creada exitosamente
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+        "500":
+          description: Error interno del servidor
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+        "400":
+          description: Error en la validación de la crédito
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+        "404":
+          description: Cliente no encontrado
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Credit'
+components:
+  schemas:
+    Credit:
+      type: object
+      properties:
+        id:
+          type: string
+        customerId:
+          type: string
+        amount:
+          type: number
+          format: double
+        creditType:
+          type: string
+        interestRate:
+          type: number
+          format: double
+        creditLimit:
+          type: number
+          format: double
+        currentDebt:
+          type: number
+          format: double
+        availableLimit:
+          type: number
+          format: double
