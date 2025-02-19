@@ -1,516 +1,103 @@
-2025-02-13 01:34:08 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 01:34:09 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 01:34:12 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 01:34:12 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 01:34:12 [main] INFO  p.mscredit.MsCreditApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 01:34:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 01:34:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 01:34:13 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=43972af4-ab7d-32e7-80a2-ccf6cd41c969
-2025-02-13 01:34:13 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.14+8-LTS-191"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@74a85515, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@4a2e1e52], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@3dfe92ef]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@2b9b17ce], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 01:34:14 [cluster-ClusterId{value='67ad9265015e477c21304179', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:110}] to localhost:27017
-2025-02-13 01:34:14 [cluster-ClusterId{value='67ad9265015e477c21304179', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=81683400}
-2025-02-13 01:34:14 [cluster-rtt-ClusterId{value='67ad9265015e477c21304179', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:109}] to localhost:27017
-2025-02-13 01:34:15 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-2025-02-13 01:34:16 [main] INFO  p.mscredit.MsCreditApplicationTests - Started MsCreditApplicationTests in 8.526 seconds (JVM running for 9.43)
-2025-02-13 02:10:08 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 02:10:09 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 02:10:11 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 02:10:11 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 02:10:11 [main] INFO  p.mscredit.MsCreditApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 02:10:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 02:10:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 02:10:12 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7fe6792d-78de-3aa3-bef9-de77b8531e09
-2025-02-13 02:10:12 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.14+8-LTS-191"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@41582899, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@595814a1], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@7de5871d]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@49d42faf], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 02:10:13 [cluster-ClusterId{value='67ad9ad4011ace50dfe75276', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:111}] to localhost:27017
-2025-02-13 02:10:13 [cluster-rtt-ClusterId{value='67ad9ad4011ace50dfe75276', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:112}] to localhost:27017
-2025-02-13 02:10:13 [cluster-ClusterId{value='67ad9ad4011ace50dfe75276', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=52362100}
-2025-02-13 02:10:15 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
-2025-02-13 02:10:15 [main] INFO  p.mscredit.MsCreditApplicationTests - Started MsCreditApplicationTests in 7.181 seconds (JVM running for 7.967)
-2025-02-13 02:10:33 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 02:10:33 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 02:10:35 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 02:10:35 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 02:10:35 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 02:10:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 02:10:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 02:10:36 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cbf22276-a966-3fe8-a314-e753df4c2124
-2025-02-13 02:10:37 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@57e4b86c, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@632241f5], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@64bba0eb]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@577bfadb], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 02:10:37 [cluster-rtt-ClusterId{value='67ad9aec393dff776ad7fb20', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:113}] to localhost:27017
-2025-02-13 02:10:37 [cluster-ClusterId{value='67ad9aec393dff776ad7fb20', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:114}] to localhost:27017
-2025-02-13 02:10:37 [cluster-ClusterId{value='67ad9aec393dff776ad7fb20', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=59692400}
-2025-02-13 02:10:38 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
-2025-02-13 02:10:39 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
-2025-02-13 02:10:40 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 7.878 seconds (JVM running for 8.311)
-2025-02-13 02:12:06 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
-2025-02-13 02:12:06 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:115}] to localhost:27017
-2025-02-13 02:12:59 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab634131c418764ebfb067
-2025-02-13 02:12:59 [nioEventLoopGroup-3-3] ERROR p.mscredit.rest.CreditController - Error al crear crédito: Un cliente personal solo puede tener un crédito.
-2025-02-13 02:13:42 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ad83f89af21c47d5b067a8
-2025-02-13 02:13:42 [reactor-http-nio-3] ERROR o.s.b.a.w.r.e.AbstractErrorWebExceptionHandler - [2e8668a5-3]  500 Server Error for HTTP POST "/v1.0/credits"
-feign.FeignException$NotFound: [404 Not Found] during [GET] to [http://localhost:8081/v1.0/customers/67ad83f89af21c47d5b067a8] [CustomerClient#getCustomerById(String)]: []
-	at feign.FeignException.clientErrorStatus(FeignException.java:219)
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
-Error has been observed at the following site(s):
-	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP POST "/v1.0/credits" [ExceptionHandlingWebHandler]
-Original Stack Trace:
-		at feign.FeignException.clientErrorStatus(FeignException.java:219)
-		at feign.FeignException.errorStatus(FeignException.java:194)
-		at feign.FeignException.errorStatus(FeignException.java:185)
-		at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92)
-		at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:98)
-		at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:141)
-		at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:91)
-		at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100)
-		at com.sun.proxy.$Proxy125.getCustomerById(Unknown Source)
-		at proyecto1.mscredit.service.CreditService.validateAndCreateCredit(CreditService.java:19)
-		at proyecto1.mscredit.rest.CreditController.createCredit(CreditController.java:59)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:145)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:258)
-		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:347)
-		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
-		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:101)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
-		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
-		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
-		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
-		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)
-		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:160)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415)
-		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:439)
-		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:656)
-		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:276)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
-		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
-		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
-		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-		at java.base/java.lang.Thread.run(Thread.java:834)
-2025-02-13 02:14:29 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ad83f89af21c47d5b067a1
-2025-02-13 02:14:29 [reactor-http-nio-3] ERROR o.s.b.a.w.r.e.AbstractErrorWebExceptionHandler - [2e8668a5-4]  500 Server Error for HTTP POST "/v1.0/credits"
-feign.FeignException$NotFound: [404 Not Found] during [GET] to [http://localhost:8081/v1.0/customers/67ad83f89af21c47d5b067a1] [CustomerClient#getCustomerById(String)]: []
-	at feign.FeignException.clientErrorStatus(FeignException.java:219)
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
-Error has been observed at the following site(s):
-	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP POST "/v1.0/credits" [ExceptionHandlingWebHandler]
-Original Stack Trace:
-		at feign.FeignException.clientErrorStatus(FeignException.java:219)
-		at feign.FeignException.errorStatus(FeignException.java:194)
-		at feign.FeignException.errorStatus(FeignException.java:185)
-		at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92)
-		at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:98)
-		at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:141)
-		at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:91)
-		at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100)
-		at com.sun.proxy.$Proxy125.getCustomerById(Unknown Source)
-		at proyecto1.mscredit.service.CreditService.validateAndCreateCredit(CreditService.java:19)
-		at proyecto1.mscredit.rest.CreditController.createCredit(CreditController.java:59)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:145)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:258)
-		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:347)
-		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
-		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:101)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
-		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
-		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
-		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
-		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)
-		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:160)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415)
-		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:439)
-		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:656)
-		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:276)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
-		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
-		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
-		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-		at java.base/java.lang.Thread.run(Thread.java:834)
-2025-02-13 02:16:00 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab649b31c418764ebfb068
-2025-02-13 02:16:10 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab649b31c418764ebfb068
-2025-02-13 02:16:10 [nioEventLoopGroup-3-3] ERROR p.mscredit.rest.CreditController - Error al crear crédito: Un cliente personal solo puede tener un crédito.
-2025-02-13 02:16:37 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab649b31c418764ebfb064
-2025-02-13 02:16:37 [reactor-http-nio-5] ERROR o.s.b.a.w.r.e.AbstractErrorWebExceptionHandler - [07c44d00-7]  500 Server Error for HTTP POST "/v1.0/credits"
-feign.FeignException$NotFound: [404 Not Found] during [GET] to [http://localhost:8081/v1.0/customers/67ab649b31c418764ebfb064] [CustomerClient#getCustomerById(String)]: []
-	at feign.FeignException.clientErrorStatus(FeignException.java:219)
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
-Error has been observed at the following site(s):
-	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP POST "/v1.0/credits" [ExceptionHandlingWebHandler]
-Original Stack Trace:
-		at feign.FeignException.clientErrorStatus(FeignException.java:219)
-		at feign.FeignException.errorStatus(FeignException.java:194)
-		at feign.FeignException.errorStatus(FeignException.java:185)
-		at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92)
-		at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:98)
-		at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:141)
-		at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:91)
-		at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100)
-		at com.sun.proxy.$Proxy125.getCustomerById(Unknown Source)
-		at proyecto1.mscredit.service.CreditService.validateAndCreateCredit(CreditService.java:19)
-		at proyecto1.mscredit.rest.CreditController.createCredit(CreditController.java:59)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:145)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:258)
-		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:347)
-		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
-		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:101)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
-		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
-		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
-		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
-		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)
-		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:160)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415)
-		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:439)
-		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:656)
-		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:276)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
-		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
-		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
-		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-		at java.base/java.lang.Thread.run(Thread.java:834)
-2025-02-13 02:21:03 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 02:21:04 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 02:21:05 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 02:21:05 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 02:21:05 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 02:21:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 02:21:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 02:21:06 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cbf22276-a966-3fe8-a314-e753df4c2124
-2025-02-13 02:21:07 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@57e4b86c, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@632241f5], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@64bba0eb]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@577bfadb], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 02:21:07 [cluster-rtt-ClusterId{value='67ad9d63d1ba5141d18b5a42', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:119}] to localhost:27017
-2025-02-13 02:21:07 [cluster-ClusterId{value='67ad9d63d1ba5141d18b5a42', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:118}] to localhost:27017
-2025-02-13 02:21:07 [cluster-ClusterId{value='67ad9d63d1ba5141d18b5a42', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=57111800}
-2025-02-13 02:21:09 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
-2025-02-13 02:21:09 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
-2025-02-13 02:21:10 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 7.995 seconds (JVM running for 8.47)
-2025-02-13 02:33:47 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 02:33:47 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 02:33:50 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 02:33:50 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 02:33:50 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 02:33:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 02:33:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 02:33:51 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cbf22276-a966-3fe8-a314-e753df4c2124
-2025-02-13 02:33:52 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@57e4b86c, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@632241f5], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@64bba0eb]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@577bfadb], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 02:33:52 [cluster-rtt-ClusterId{value='67ada060df66e46951fb6381', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:127}] to localhost:27017
-2025-02-13 02:33:52 [cluster-ClusterId{value='67ada060df66e46951fb6381', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:126}] to localhost:27017
-2025-02-13 02:33:52 [cluster-ClusterId{value='67ada060df66e46951fb6381', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=57100100}
-2025-02-13 02:33:54 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
-2025-02-13 02:33:54 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
-2025-02-13 02:33:55 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 8.901 seconds (JVM running for 9.317)
-2025-02-13 02:34:00 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab649b31c418764ebfb064
-2025-02-13 02:34:00 [reactor-http-nio-3] ERROR o.s.b.a.w.r.e.AbstractErrorWebExceptionHandler - [a4ce1f0b-1]  500 Server Error for HTTP POST "/v1.0/credits"
-feign.FeignException$NotFound: [404 Not Found] during [GET] to [http://localhost:8081/v1.0/customers/67ab649b31c418764ebfb064] [CustomerClient#getCustomerById(String)]: []
-	at feign.FeignException.clientErrorStatus(FeignException.java:219)
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
-Error has been observed at the following site(s):
-	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP POST "/v1.0/credits" [ExceptionHandlingWebHandler]
-Original Stack Trace:
-		at feign.FeignException.clientErrorStatus(FeignException.java:219)
-		at feign.FeignException.errorStatus(FeignException.java:194)
-		at feign.FeignException.errorStatus(FeignException.java:185)
-		at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92)
-		at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:98)
-		at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:141)
-		at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:91)
-		at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100)
-		at com.sun.proxy.$Proxy125.getCustomerById(Unknown Source)
-		at proyecto1.mscredit.service.CreditService.validateAndCreateCredit(CreditService.java:19)
-		at proyecto1.mscredit.rest.CreditController.createCredit(CreditController.java:61)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:145)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:258)
-		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:347)
-		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
-		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:101)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
-		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
-		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
-		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
-		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)
-		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:160)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415)
-		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:439)
-		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:656)
-		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:276)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
-		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
-		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
-		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-		at java.base/java.lang.Thread.run(Thread.java:834)
-2025-02-13 02:44:43 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab649b31c418764ebfb064
-2025-02-13 02:44:43 [reactor-http-nio-5] ERROR o.s.b.a.w.r.e.AbstractErrorWebExceptionHandler - [341e2ea9-2]  500 Server Error for HTTP POST "/v1.0/credits"
-feign.FeignException$NotFound: [404 Not Found] during [GET] to [http://localhost:8081/v1.0/customers/67ab649b31c418764ebfb064] [CustomerClient#getCustomerById(String)]: []
-	at feign.FeignException.clientErrorStatus(FeignException.java:219)
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
-Error has been observed at the following site(s):
-	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP POST "/v1.0/credits" [ExceptionHandlingWebHandler]
-Original Stack Trace:
-		at feign.FeignException.clientErrorStatus(FeignException.java:219)
-		at feign.FeignException.errorStatus(FeignException.java:194)
-		at feign.FeignException.errorStatus(FeignException.java:185)
-		at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92)
-		at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:98)
-		at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:141)
-		at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:91)
-		at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100)
-		at com.sun.proxy.$Proxy125.getCustomerById(Unknown Source)
-		at proyecto1.mscredit.service.CreditService.validateAndCreateCredit(CreditService.java:19)
-		at proyecto1.mscredit.rest.CreditController.createCredit(CreditController.java:61)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:145)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:258)
-		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:347)
-		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
-		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:101)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
-		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
-		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
-		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
-		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)
-		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
-		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
-		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:160)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
-		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
-		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415)
-		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:439)
-		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:656)
-		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:276)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
-		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
-		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
-		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
-		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
-		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-		at java.base/java.lang.Thread.run(Thread.java:834)
-2025-02-13 02:45:00 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 02:45:01 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 02:45:02 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 02:45:02 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 02:45:02 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 02:45:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 02:45:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 02:45:03 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cbf22276-a966-3fe8-a314-e753df4c2124
-2025-02-13 02:45:04 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@577bfadb, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@25ae1f80], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@54f2df29]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@6df791a4], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 02:45:05 [cluster-rtt-ClusterId{value='67ada300c79d320fa2b4e070', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:129}] to localhost:27017
-2025-02-13 02:45:05 [cluster-ClusterId{value='67ada300c79d320fa2b4e070', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:128}] to localhost:27017
-2025-02-13 02:45:05 [cluster-ClusterId{value='67ada300c79d320fa2b4e070', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=54835100}
-2025-02-13 02:45:06 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
-2025-02-13 02:45:07 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
-2025-02-13 02:45:07 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 8.478 seconds (JVM running for 8.941)
-2025-02-13 02:45:16 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab649b31c418764ebfb064
-2025-02-13 02:45:42 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab64da31c418764ebfb069
-2025-02-13 02:45:42 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:130}] to localhost:27017
-2025-02-13 02:45:48 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
-2025-02-13 02:46:06 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab64da31c418764ebfb069
-2025-02-13 02:46:06 [nioEventLoopGroup-3-3] ERROR p.mscredit.rest.CreditController - Error al crear crédito: Un cliente personal solo puede tener un crédito.
-2025-02-13 02:47:13 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ac8bc514334b06ea232968
-2025-02-13 02:47:24 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ac8bc514334b06ea232968
-2025-02-13 02:47:33 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
-2025-02-13 02:48:44 [reactor-http-nio-4] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab634131c418764ebfb067
-2025-02-13 02:48:44 [nioEventLoopGroup-3-3] ERROR p.mscredit.rest.CreditController - Error al crear crédito: Un cliente personal solo puede tener un crédito.
-2025-02-13 04:38:01 [reactor-http-nio-10] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
-2025-02-13 04:38:15 [reactor-http-nio-10] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ac8bc514334b06ea232968
-2025-02-13 04:38:23 [reactor-http-nio-10] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
-2025-02-13 04:38:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 04:38:48 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 04:38:50 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 04:38:50 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 04:38:50 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 04:38:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 04:38:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 101 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 04:38:51 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cbf22276-a966-3fe8-a314-e753df4c2124
-2025-02-13 04:38:52 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@64bba0eb, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@577bfadb], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@25ae1f80]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@54f2df29], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 04:38:52 [cluster-ClusterId{value='67adbdac94103a3091f481d8', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:137}] to localhost:27017
-2025-02-13 04:38:52 [cluster-rtt-ClusterId{value='67adbdac94103a3091f481d8', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:136}] to localhost:27017
-2025-02-13 04:38:52 [cluster-ClusterId{value='67adbdac94103a3091f481d8', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=56315000}
-2025-02-13 04:38:54 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
-2025-02-13 04:38:54 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
-2025-02-13 04:38:55 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 8.064 seconds (JVM running for 8.51)
-2025-02-13 04:42:29 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ac8bc514334b06ea232968
-2025-02-13 04:42:29 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:138}] to localhost:27017
-2025-02-13 05:18:57 [reactor-http-nio-6] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 237 ms
-2025-02-13 05:41:05 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2025-02-13 05:41:06 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2025-02-13 05:41:07 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
-2025-02-13 05:41:07 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
-2025-02-13 05:41:07 [main] INFO  p.mscredit.MsCreditApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-02-13 05:41:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2025-02-13 05:41:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 1 Reactive MongoDB repository interfaces.
-2025-02-13 05:41:08 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7fe6792d-78de-3aa3-bef9-de77b8531e09
-2025-02-13 05:41:09 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.14+8-LTS-191"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@41582899, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@595814a1], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@7de5871d]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@49d42faf], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-2025-02-13 05:41:09 [cluster-rtt-ClusterId{value='67adcc453c0483348ac08d8d', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:161}] to localhost:27017
-2025-02-13 05:41:09 [cluster-ClusterId{value='67adcc453c0483348ac08d8d', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:162}] to localhost:27017
-2025-02-13 05:41:09 [cluster-ClusterId{value='67adcc453c0483348ac08d8d', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=95548300}
-2025-02-13 05:41:11 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
-2025-02-13 05:41:12 [main] INFO  p.mscredit.MsCreditApplicationTests - Started MsCreditApplicationTests in 7.132 seconds (JVM running for 8.078)
+2025-02-18 17:23:29 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-02-18 17:23:30 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2025-02-18 17:23:33 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
+2025-02-18 17:23:33 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
+2025-02-18 17:23:33 [main] INFO  p.mscredit.MsCreditApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-02-18 17:23:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-02-18 17:23:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 215 ms. Found 1 Reactive MongoDB repository interfaces.
+2025-02-18 17:23:35 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b267cc67-cf73-3de9-937b-d3958d22d11e
+2025-02-18 17:23:36 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.14+8-LTS-191"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@2935042e, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@5fae1b], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@436dded]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@4d12e75d], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-02-18 17:23:36 [cluster-ClusterId{value='67b508685f6fe85c061325fe', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:155}] to localhost:27017
+2025-02-18 17:23:36 [cluster-rtt-ClusterId{value='67b508685f6fe85c061325fe', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:156}] to localhost:27017
+2025-02-18 17:23:36 [cluster-ClusterId{value='67b508685f6fe85c061325fe', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=81818000}
+2025-02-18 17:23:38 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2025-02-18 17:23:39 [main] INFO  p.mscredit.MsCreditApplicationTests - Started MsCreditApplicationTests in 10.655 seconds (JVM running for 12.417)
+2025-02-18 17:26:53 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-02-18 17:26:54 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2025-02-18 17:26:56 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
+2025-02-18 17:26:56 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
+2025-02-18 17:26:56 [main] INFO  p.mscredit.MsCreditApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-02-18 17:26:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-02-18 17:26:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 166 ms. Found 1 Reactive MongoDB repository interfaces.
+2025-02-18 17:26:57 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b267cc67-cf73-3de9-937b-d3958d22d11e
+2025-02-18 17:26:58 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.14+8-LTS-191"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@b1caa00, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@6987f367], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@2c002f95]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@5f5efbfc], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-02-18 17:26:58 [cluster-rtt-ClusterId{value='67b50932b57b0b5a6786340e', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:158}] to localhost:27017
+2025-02-18 17:26:58 [cluster-ClusterId{value='67b50932b57b0b5a6786340e', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:157}] to localhost:27017
+2025-02-18 17:26:58 [cluster-ClusterId{value='67b50932b57b0b5a6786340e', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=78005400}
+2025-02-18 17:27:00 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2025-02-18 17:27:01 [main] INFO  p.mscredit.MsCreditApplicationTests - Started MsCreditApplicationTests in 9.263 seconds (JVM running for 10.996)
+2025-02-18 17:27:57 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-02-18 17:27:58 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2025-02-18 17:28:00 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
+2025-02-18 17:28:00 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
+2025-02-18 17:28:00 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-18 17:28:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-02-18 17:28:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 1 Reactive MongoDB repository interfaces.
+2025-02-18 17:28:01 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f54c20b1-f911-3ea7-8cf0-1d5b3da04259
+2025-02-18 17:28:02 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@40f1aa95, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@1c72189f], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@14be750c]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@58882a93], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-02-18 17:28:03 [cluster-rtt-ClusterId{value='67b509720adf8976419e62e9', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:160}] to localhost:27017
+2025-02-18 17:28:03 [cluster-ClusterId{value='67b509720adf8976419e62e9', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:159}] to localhost:27017
+2025-02-18 17:28:03 [cluster-ClusterId{value='67b509720adf8976419e62e9', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=54277500}
+2025-02-18 17:28:04 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2025-02-18 17:28:04 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
+2025-02-18 17:28:05 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 8.197 seconds (JVM running for 8.637)
+2025-02-18 17:28:11 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 17:28:11 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:161}] to localhost:27017
+2025-02-18 17:28:59 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67ac8bc514334b06ea232968
+2025-02-18 17:33:01 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Actualizando crédito id: 67ada38cc79d320fa2b4e073
+2025-02-18 17:33:07 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 17:34:35 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-02-18 17:34:36 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2025-02-18 17:34:38 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
+2025-02-18 17:34:38 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
+2025-02-18 17:34:38 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-18 17:34:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-02-18 17:34:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 1 Reactive MongoDB repository interfaces.
+2025-02-18 17:34:39 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f54c20b1-f911-3ea7-8cf0-1d5b3da04259
+2025-02-18 17:34:40 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@7e2bc2f4, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@67eeb310], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@76af51d6]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@39ace1a7], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-02-18 17:34:40 [cluster-rtt-ClusterId{value='67b50b00c8a5bb49babed0a6', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:162}] to localhost:27017
+2025-02-18 17:34:40 [cluster-ClusterId{value='67b50b00c8a5bb49babed0a6', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:163}] to localhost:27017
+2025-02-18 17:34:40 [cluster-ClusterId{value='67b50b00c8a5bb49babed0a6', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=52257800}
+2025-02-18 17:34:41 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2025-02-18 17:34:42 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
+2025-02-18 17:34:42 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 8.317 seconds (JVM running for 8.719)
+2025-02-18 17:35:11 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Actualizando crédito id: 67ada38cc79d320fa2b4e073
+2025-02-18 17:35:12 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:164}] to localhost:27017
+2025-02-18 17:35:20 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 17:36:28 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Actualizando crédito id: 67adbe8594103a3091f481d9
+2025-02-18 17:49:49 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-02-18 17:49:50 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2025-02-18 17:49:52 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=ms-credits, profiles=[default], label=null, version=3dfb484c3d068d093481832eccb35ca1dfbe66dc, state=null
+2025-02-18 17:49:52 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/aliciaVillon/ms-admin-server-data.git/ms-credits.yml'}]
+2025-02-18 17:49:52 [main] INFO  p.mscredit.MsCreditsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-18 17:49:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-02-18 17:49:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 1 Reactive MongoDB repository interfaces.
+2025-02-18 17:49:53 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f54c20b1-f911-3ea7-8cf0-1d5b3da04259
+2025-02-18 17:49:54 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.25+9-LTS-256"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@19dac2d6, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7e2bc2f4], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@67eeb310]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@76af51d6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-02-18 17:49:54 [cluster-ClusterId{value='67b50e92937aa93351a8b74c', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:166}] to localhost:27017
+2025-02-18 17:49:54 [cluster-ClusterId{value='67b50e92937aa93351a8b74c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=62299300}
+2025-02-18 17:49:54 [cluster-rtt-ClusterId{value='67b50e92937aa93351a8b74c', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:165}] to localhost:27017
+2025-02-18 17:49:55 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2025-02-18 17:49:56 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8083
+2025-02-18 17:49:57 [main] INFO  p.mscredit.MsCreditsApplication - Started MsCreditsApplication in 8.057 seconds (JVM running for 8.452)
+2025-02-18 18:02:35 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 18:02:35 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:172}] to localhost:27017
+2025-02-18 18:23:46 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ab634131c418764ebfb067
+2025-02-18 18:24:05 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ac8bc514334b06ea232968
+2025-02-18 18:24:16 [reactor-http-nio-5] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 18:26:25 [reactor-http-nio-7] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b5170ca0b2356cb7b79846
+2025-02-18 18:26:47 [reactor-http-nio-8] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b5170ca0b2356cb7b79846
+2025-02-18 18:28:45 [reactor-http-nio-8] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b5170ca0b2356cb7b79846
+2025-02-18 18:34:31 [reactor-http-nio-10] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 18:35:04 [reactor-http-nio-10] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 18:38:18 [reactor-http-nio-12] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67ac8bc514334b06ea232968
+2025-02-18 18:38:36 [reactor-http-nio-12] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67ac8bc514334b06ea232968
+2025-02-18 18:39:01 [reactor-http-nio-12] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b4bacba0b2356cb7b79845
+2025-02-18 18:39:47 [reactor-http-nio-12] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios
+2025-02-18 18:40:29 [reactor-http-nio-8] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b4bacba0b2356cb7b79845
+2025-02-18 18:42:10 [reactor-http-nio-14] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67b4bacba0b2356cb7b79845
+2025-02-18 18:42:17 [reactor-http-nio-8] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b4bacba0b2356cb7b79845
+2025-02-18 18:44:11 [reactor-http-nio-2] INFO  p.mscredit.rest.CreditController - Intentando crear crédito para cliente 67b4bacba0b2356cb7b79845
+2025-02-18 18:44:18 [reactor-http-nio-8] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b4bacba0b2356cb7b79845
+2025-02-18 18:45:10 [reactor-http-nio-2] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b4bacba0b2356cb7b79845
+2025-02-18 19:53:02 [reactor-http-nio-3] INFO  p.mscredit.rest.CreditController - Obteniendo todos los créditos bancarios del cliente con ID: 67b4bacba0b2356cb7b79845
