@@ -12,5 +12,5 @@ public interface CreditService {
     public Mono<Credit> createCredit(Credit Credit);
     public Mono<Credit> updateCredit(String id, Credit updatedCredit);
     public Flux<Credit> getCreditProductsByCustomer(String id);
-
+    public Mono<Boolean> hasOverdueDebt(String customerId);
 }

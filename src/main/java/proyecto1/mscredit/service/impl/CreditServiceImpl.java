@@ -12,6 +12,8 @@ import proyecto1.mscredit.service.CreditService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.LocalDate;
+
 @Service
 @RequiredArgsConstructor
 public class CreditServiceImpl implements CreditService {
@@ -80,6 +82,8 @@ public class CreditServiceImpl implements CreditService {
                     existingAccount.setCreditType(updatedCredit.getCreditType());
                     existingAccount.setCurrentDebt(updatedCredit.getCurrentDebt());
                     existingAccount.setAvailableLimit(updatedCredit.getAvailableLimit());
+                    existingAccount.setDueDate(updatedCredit.getDueDate());
+                    existingAccount.setOutstandingAmount(updatedCredit.getOutstandingAmount());
                     return creditRepository.save(existingAccount);
                 });
     }
@@ -90,5 +94,13 @@ public class CreditServiceImpl implements CreditService {
                 .switchIfEmpty(Flux.error(new ResponseStatusException(
                         HttpStatus.NOT_FOUND, "No se encontraron créditos para este cliente")));
     }
+
+    @Override
+    public Mono<Boolean> hasOverdueDebt(String customerId) {
+        return creditRepository.findByCustomerId(customerId)
+                .filter(credit -> credit.getDueDate().isBefore(LocalDate.now()) && credit.getOutstandingAmount() > 0)
+                .hasElements();
+    }
+
 
 }
