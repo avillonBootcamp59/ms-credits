@@ -115,6 +115,15 @@ public class CreditController {
 
     }
 
+    @Operation(summary = "Obtener todos los créditos", description = "Lista todos los créditos otorgados por el banco")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista de créditos obtenida correctamente"),
+            @ApiResponse(responseCode = "500", description = "Error interno del servidor")
+    })
+    @GetMapping("/hasOverdueDebt/{id}")
+    public Mono<Boolean> hasOverdueDebt(@PathVariable String id) {
+        return creditService.hasOverdueDebt(id);
+    }
     private CreditDTO convertToDTO(Credit credit) {
         return new CreditDTO(
                 credit.getId(),
