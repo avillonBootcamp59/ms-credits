@@ -61,7 +61,7 @@ public class CreditController {
             return Mono.just(ResponseEntity.badRequest().body(Map.of("error", "Datos inválidos", "status", "400")));
         }
 
-        logger.info("Intentando crear crédito para cliente {}", creditDTO.getCustomerId());
+        logger.info("Intentando crear crédito", creditDTO.getCustomerId());
         return creditService.createCredit(convertDtoToEntity(creditDTO))
                 .map(savedCredit -> ResponseEntity.status(HttpStatus.CREATED)
                         .body(Map.of("message", "Crédito creado exitosamente", "id", savedCredit.getId())))
@@ -81,10 +81,8 @@ public class CreditController {
             @ApiResponse(responseCode = "500", description = "Error interno del servidor")
     })
     @PutMapping("/{id}")
-    public Mono<ResponseEntity<Credit>> updateCredit(@PathVariable String id, @RequestBody Credit credit) {
-        logger.info("Actualizando crédito id: {}", id);
-
-        return creditService.updateCredit(id, credit)
+    public Mono<ResponseEntity<Credit>> updateCredit(@PathVariable String id, @RequestBody CreditDTO creditDTO) {
+        return creditService.updateCredit(id, convertDtoToEntity(creditDTO))
                 .map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
@@ -97,8 +95,6 @@ public class CreditController {
     })
     @DeleteMapping("/{id}")
     public Mono<ResponseEntity<Void>> deleteCredit(@PathVariable String id) {
-        logger.info("Eliminando crédito con ID: {}", id);
-
         return creditService.deleteCredit(id)
                 .then(Mono.just(ResponseEntity.ok().<Void>build()))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
