@@ -55,14 +55,14 @@ public class CreditController {
             @ApiResponse(responseCode = "404", description = "Cliente no encontrado"),
     })
     @PostMapping
-    public Mono<ResponseEntity<Map<String, String>>> createCredit(@Valid @RequestBody Credit credit) {
-        if (credit == null || credit.getCustomerId() == null) {
+    public Mono<ResponseEntity<Map<String, String>>> createCredit(@Valid @RequestBody CreditDTO creditDTO) {
+        if (creditDTO == null || creditDTO.getCustomerId() == null) {
             logger.error("Intento de crear un crédito con datos inválidos");
             return Mono.just(ResponseEntity.badRequest().body(Map.of("error", "Datos inválidos", "status", "400")));
         }
 
-        logger.info("Intentando crear crédito para cliente {}", credit.getCustomerId());
-        return creditService.createCredit(credit)
+        logger.info("Intentando crear crédito para cliente {}", creditDTO.getCustomerId());
+        return creditService.createCredit(convertDtoToEntity(creditDTO))
                 .map(savedCredit -> ResponseEntity.status(HttpStatus.CREATED)
                         .body(Map.of("message", "Crédito creado exitosamente", "id", savedCredit.getId())))
                 .onErrorResume(ResponseStatusException.class, ex -> {
@@ -137,5 +137,21 @@ public class CreditController {
                 credit.getAmount(),
                 credit.getCreditLimit(),
                 credit.getInterestRate());
+    }
+
+    private Credit convertDtoToEntity(CreditDTO creditDTO) {
+        return new Credit(
+                null,
+                creditDTO.getCustomerId(),
+                creditDTO.getAmount(),
+                creditDTO.getCreditType(),
+                creditDTO.getCreditLimit(),
+                creditDTO.getInterestRate(),
+                0.0,
+                0.0,
+                null,
+                0.0,
+                null
+        );
     }
 }

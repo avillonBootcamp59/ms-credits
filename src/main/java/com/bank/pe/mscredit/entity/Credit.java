@@ -1,5 +1,6 @@
 package com.bank.pe.mscredit.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 import org.bson.codecs.pojo.annotations.BsonId;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
+@AllArgsConstructor
 @Document(collection = "credits")
 public class Credit {
     @BsonId

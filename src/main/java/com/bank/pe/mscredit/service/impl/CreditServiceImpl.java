@@ -1,5 +1,6 @@
 package com.bank.pe.mscredit.service.impl;
 
+import com.bank.pe.mscredit.dto.CreditDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -105,6 +106,5 @@ public class CreditServiceImpl implements CreditService {
                 .filter(credit -> credit.getDueDate().isBefore(LocalDate.now()) && credit.getOutstandingAmount() > 0)
                 .hasElements();
     }
-
 
 }
