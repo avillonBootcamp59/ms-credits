@@ -1,4 +1,4 @@
-package proyecto1.mscredit.dto;
+package com.bank.pe.mscredit.dto;
 
 import lombok.Data;
 

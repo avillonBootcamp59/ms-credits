@@ -1,4 +1,4 @@
-package proyecto1.mscredit.entity;
+package com.bank.pe.mscredit.entity;
 
 import lombok.Data;
 import org.bson.codecs.pojo.annotations.BsonId;

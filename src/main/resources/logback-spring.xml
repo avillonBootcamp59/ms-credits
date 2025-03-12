@@ -26,5 +26,5 @@
     </root>
 
     <!-- Logs detallados para creditsController -->
-    <logger name="proyecto1.mscredit.rest.CreditController" level="DEBUG"/>
+    <logger name="com.bank.pe.mscredit.controllers.CreditController" level="DEBUG"/>
 </configuration>

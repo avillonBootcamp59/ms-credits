@@ -1,4 +1,4 @@
-package proyecto1.mscredit.rest;
+package com.bank.pe.mscredit.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -11,16 +11,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import proyecto1.mscredit.dto.CreditDTO;
-import proyecto1.mscredit.service.CreditService;
+import com.bank.pe.mscredit.dto.CreditDTO;
+import com.bank.pe.mscredit.service.CreditService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import proyecto1.mscredit.entity.Credit;
+import com.bank.pe.mscredit.entity.Credit;
 import javax.validation.Valid;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/v1.0/credits")
+@RequestMapping("/api/v1/credits")
 @RequiredArgsConstructor
 @Tag(name = "Credit API", description = "Gestión de créditos bancarios")
 public class CreditController {

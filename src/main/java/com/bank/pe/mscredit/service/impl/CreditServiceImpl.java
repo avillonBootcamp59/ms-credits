@@ -1,14 +1,14 @@
-package proyecto1.mscredit.service.impl;
+package com.bank.pe.mscredit.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import proyecto1.mscredit.client.CustomerClient;
-import proyecto1.mscredit.dto.CustomerDTO;
-import proyecto1.mscredit.entity.Credit;
-import proyecto1.mscredit.repository.CreditRepository;
-import proyecto1.mscredit.service.CreditService;
+import com.bank.pe.mscredit.client.CustomerClient;
+import com.bank.pe.mscredit.dto.CustomerDTO;
+import com.bank.pe.mscredit.entity.Credit;
+import com.bank.pe.mscredit.repository.CreditRepository;
+import com.bank.pe.mscredit.service.CreditService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

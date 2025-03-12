@@ -1,10 +1,12 @@
 spring:
   application:
     name: ms-credits
-
   cloud:
     config:
+      enabled: false
       uri: http://localhost:8888
+      username: avillon
+      password: 4v1ll0nJd
       fail-fast: true
 
 springdoc:

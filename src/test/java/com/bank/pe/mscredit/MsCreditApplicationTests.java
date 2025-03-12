@@ -1,4 +1,4 @@
-package proyecto1.mscredit;
+package com.bank.pe.mscredit;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

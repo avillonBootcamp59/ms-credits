@@ -1,6 +1,6 @@
-package proyecto1.mscredit.service;
+package com.bank.pe.mscredit.service;
 
-import proyecto1.mscredit.entity.Credit;
+import com.bank.pe.mscredit.entity.Credit;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

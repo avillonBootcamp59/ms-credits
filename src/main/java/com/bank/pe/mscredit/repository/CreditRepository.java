@@ -1,8 +1,8 @@
-package proyecto1.mscredit.repository;
+package com.bank.pe.mscredit.repository;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
-import proyecto1.mscredit.entity.Credit;
+import com.bank.pe.mscredit.entity.Credit;
 import reactor.core.publisher.Flux;
 
 @Repository

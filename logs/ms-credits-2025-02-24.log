@@ -13,7 +13,7 @@ java.lang.IllegalStateException: Could not locate PropertySource and the fail fa
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
-	at proyecto1.mscredit.MsCreditsApplication.main(MsCreditsApplication.java:13)
+	at com.bank.pe.mscredit.MsCreditsApplication.main(MsCreditsApplication.java:13)
 Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/ms-credits/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)

@@ -1,12 +1,11 @@
-package proyecto1.mscredit;
+package com.bank.pe.mscredit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
 @SpringBootApplication
-@EnableReactiveMongoRepositories(basePackages = "proyecto1.mscredit.repository")
+@EnableReactiveMongoRepositories(basePackages = "com.bank.pe.mscredit.repository")
 public class MsCreditsApplication {
 
 	public static void main(String[] args) {
