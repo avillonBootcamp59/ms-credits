@@ -17,9 +17,8 @@
         <spring.cloud.version>2021.0.8</spring.cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -201,6 +200,11 @@
                         </rule>
                     </rules>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.0.2155</version>
             </plugin>
         </plugins>
     </build>
