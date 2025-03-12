@@ -1,6 +1,7 @@
 package com.bank.pe.mscredit.entity;
 
 import lombok.Data;
+import lombok.ToString;
 import org.bson.codecs.pojo.annotations.BsonId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -27,4 +28,6 @@ public class Credit {
     public Credit() {
         this.createdAt = LocalDateTime.now();
     }
+
+
 }

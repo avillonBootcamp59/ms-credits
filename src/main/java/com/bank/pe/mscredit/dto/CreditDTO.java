@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class CreditDTO {
     private String id;
     private String customerId; // Relación con Cliente
-    private String creditType; // "personal", "hipotecario"
+    private String creditType; // "personal", "Empresarial"
     private Double amount; // Monto del crédito
     private Double creditLimit; // Límite del crédito
     private Double interestRate;  // Tasa de interés aplicada

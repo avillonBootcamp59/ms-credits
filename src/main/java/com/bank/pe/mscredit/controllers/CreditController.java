@@ -56,6 +56,11 @@ public class CreditController {
     })
     @PostMapping
     public Mono<ResponseEntity<Map<String, String>>> createCredit(@Valid @RequestBody Credit credit) {
+        if (credit == null || credit.getCustomerId() == null) {
+            logger.error("Intento de crear un crédito con datos inválidos");
+            return Mono.just(ResponseEntity.badRequest().body(Map.of("error", "Datos inválidos", "status", "400")));
+        }
+
         logger.info("Intentando crear crédito para cliente {}", credit.getCustomerId());
         return creditService.createCredit(credit)
                 .map(savedCredit -> ResponseEntity.status(HttpStatus.CREATED)

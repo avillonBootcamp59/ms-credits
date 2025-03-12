@@ -177,6 +177,12 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <excludes>
+                        <exclude>com/bank/pe/mscredit/MsCreditsApplication.class</exclude>
+                        <exclude>com/bank/pe/mscredit/dto/*</exclude>
+                        <exclude>com/bank/pe/mscredit/client/*</exclude>
+                        <exclude>com/bank/pe/mscredit/entity/*</exclude>
+                    </excludes>
                     <rules>
                         <rule>
                             <element>BUNDLE</element>

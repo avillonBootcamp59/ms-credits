@@ -1,6 +1,7 @@
 package com.bank.pe.mscredit.dto;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 public class CustomerDTO {

@@ -64,11 +64,15 @@ public class CreditServiceImpl implements CreditService {
 
     @Override
     public Mono<Credit> createCredit(Credit Credit) {
+        if (Credit == null || Credit.getCustomerId() == null) {
+            return Mono.error(new ResponseStatusException(HttpStatus.BAD_REQUEST, "Datos inválidos"));
+        }
         return customerClient.getCustomerById(Credit.getCustomerId())
                 .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente no encontrado")))
                 .flatMap(customer -> creditRepository.findByCustomerId(Credit.getCustomerId()).collectList()
                         .flatMap(existingAccounts -> validateAndCreateCredit( customer, Credit))
-                        .flatMap(creditRepository::save));
+                      //  .flatMap(creditRepository::save)
+                );
     }
 
     @Override
