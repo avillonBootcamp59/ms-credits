@@ -4,13 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.bank.pe.mscredit</groupId>
     <artifactId>ms-credits</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ms-credits</name>
     <description>Microservicio para administración de créditos bancarios con Spring Boot</description>
-
     <properties>
         <java.version>11</java.version>
         <spring.boot.version>2.7.18</spring.boot.version>
@@ -37,9 +35,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <dependencies>
-        <!-- Spring Boot WebFlux -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-webflux-ui</artifactId>
@@ -57,14 +53,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-
-        <!-- Spring Boot MongoDB (Versión compatible con Java 11) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
         </dependency>
-
-        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -130,10 +122,8 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
-            <!-- Compilador para Java 11 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

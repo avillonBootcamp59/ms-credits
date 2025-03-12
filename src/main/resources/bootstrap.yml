@@ -8,6 +8,9 @@ spring:
       username: avillon
       password: 4v1ll0nJd
       fail-fast: true
+      retry:
+        max-attempts: 5
+        initial-interval: 1000
 
 springdoc:
   api-docs:
