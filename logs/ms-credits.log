@@ -412,3 +412,8 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2025-03-16 16:09:22 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
 2025-03-16 16:09:22 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CREDITS/NTTD-C6JKR54:ms-credits:8083 - deregister  status: 200
 2025-03-16 16:09:22 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-03-16 16:09:48 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CREDITS/NTTD-C6JKR54:ms-credits:8083 - Re-registering apps/MS-CREDITS
+2025-03-16 16:09:48 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CREDITS/NTTD-C6JKR54:ms-credits:8083: registering service...
+2025-03-16 16:09:48 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CREDITS/NTTD-C6JKR54:ms-credits:8083 - registration status: 204
+2025-03-16 16:14:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-03-16 16:19:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
