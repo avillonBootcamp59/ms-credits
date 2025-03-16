@@ -234,7 +234,6 @@ class CreditServiceImplTest {
         verify(creditRepository).findById("999");
     }
 
-
     @Test
     void testDeleteCredit_Success() {
         when(creditRepository.findById("1")).thenReturn(Mono.just(credit1));
@@ -262,7 +261,6 @@ class CreditServiceImplTest {
         verify(creditRepository).findById("999");
     }
 
-
     @Test
     public void testHasOverdueDebt() {
         String customerId = "12345";
@@ -278,6 +276,7 @@ class CreditServiceImplTest {
                 .expectNext(true)
                 .verifyComplete();
     }
+
     @Test
     public void testHasNoOverdueDebt() {
         String customerId = "12345";
@@ -320,6 +319,4 @@ class CreditServiceImplTest {
 
         verify(creditRepository).findByCustomerId("123");
     }
-
-
 }
