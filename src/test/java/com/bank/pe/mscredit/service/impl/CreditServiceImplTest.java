@@ -16,6 +16,8 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import java.time.LocalDate;
+
 class CreditServiceImplTest {
 
     @Mock
@@ -176,15 +178,51 @@ class CreditServiceImplTest {
     }
 
 
-   // @Test
-    void testHasOverdueDebt_False() {
-        when(creditRepository.findByCustomerId("999")).thenReturn(Flux.empty());
+    @Test
+    public void testHasOverdueDebt() {
+        String customerId = "12345";
+        Credit overdueCredit = new Credit();
+        overdueCredit.setDueDate(LocalDate.now().minusDays(1));
+        overdueCredit.setOutstandingAmount(100.0);
 
-        StepVerifier.create(creditService.hasOverdueDebt("999"))
+        when(creditRepository.findByCustomerId(customerId)).thenReturn(Flux.just(overdueCredit));
+
+        Mono<Boolean> result = creditService.hasOverdueDebt(customerId);
+
+        StepVerifier.create(result)
+                .expectNext(true)
+                .verifyComplete();
+    }
+    @Test
+    public void testHasNoOverdueDebt() {
+        String customerId = "12345";
+        Credit nonOverdueCredit = new Credit();
+        nonOverdueCredit.setDueDate(LocalDate.now().plusDays(1));
+        nonOverdueCredit.setOutstandingAmount(100.0);
+
+        when(creditRepository.findByCustomerId(customerId)).thenReturn(Flux.just(nonOverdueCredit));
+
+        Mono<Boolean> result = creditService.hasOverdueDebt(customerId);
+
+        StepVerifier.create(result)
                 .expectNext(false)
                 .verifyComplete();
+    }
 
-        verify(creditRepository).findByCustomerId("999");
+    @Test
+    public void testHasNoOutstandingAmount() {
+        String customerId = "12345";
+        Credit creditWithNoOutstandingAmount = new Credit();
+        creditWithNoOutstandingAmount.setDueDate(LocalDate.now().minusDays(1));
+        creditWithNoOutstandingAmount.setOutstandingAmount(0.0);
+
+        when(creditRepository.findByCustomerId(customerId)).thenReturn(Flux.just(creditWithNoOutstandingAmount));
+
+        Mono<Boolean> result = creditService.hasOverdueDebt(customerId);
+
+        StepVerifier.create(result)
+                .expectNext(false)
+                .verifyComplete();
     }
 
     @Test
