@@ -120,6 +120,91 @@ class CreditServiceImplTest {
         verify(creditRepository).save(any(Credit.class));
     }
 
+    @Test
+    public void testCreateCredit_NullCredit() {
+        Mono<Credit> result = creditService.createCredit(null);
+
+        StepVerifier.create(result)
+                .expectError(ResponseStatusException.class)
+                .verify();
+    }
+
+    @Test
+    public void testCreateCredit_NullCustomerId() {
+        Credit credit = new Credit();
+
+        Mono<Credit> result = creditService.createCredit(credit);
+
+        StepVerifier.create(result)
+                .expectError(ResponseStatusException.class)
+                .verify();
+    }
+
+    @Test
+    public void testCreateCredit_CustomerNotFound() {
+        Credit credit = new Credit();
+        credit.setCustomerId("12345");
+
+        when(customerClient.getCustomerById(credit.getCustomerId())).thenReturn(Mono.empty());
+
+        Mono<Credit> result = creditService.createCredit(credit);
+
+        StepVerifier.create(result)
+                .expectError(ResponseStatusException.class)
+                .verify();
+    }
+
+    @Test
+    public void testCreateCredit_ValidPersonalCustomer() {
+        Credit credit = new Credit();
+        credit.setCustomerId("12345");
+        CustomerDTO customer = new CustomerDTO();
+        customer.setType("PERSONAL");
+
+        when(customerClient.getCustomerById(credit.getCustomerId())).thenReturn(Mono.just(customer));
+        when(creditRepository.findByCustomerId(credit.getCustomerId())).thenReturn(Flux.empty());
+        when(creditRepository.save(credit)).thenReturn(Mono.just(credit));
+
+        Mono<Credit> result = creditService.createCredit(credit);
+
+        StepVerifier.create(result)
+                .expectNext(credit)
+                .verifyComplete();
+    }
+
+    @Test
+    public void testCreateCredit_ValidEmpresarialCustomer() {
+        Credit credit = new Credit();
+        credit.setCustomerId("12345");
+        CustomerDTO customer = new CustomerDTO();
+        customer.setType("EMPRESARIAL");
+
+        when(customerClient.getCustomerById(credit.getCustomerId())).thenReturn(Mono.just(customer));
+        when(creditRepository.findByCustomerId(credit.getCustomerId())).thenReturn(Flux.empty());
+        when(creditRepository.save(credit)).thenReturn(Mono.just(credit));
+
+        Mono<Credit> result = creditService.createCredit(credit);
+
+        StepVerifier.create(result)
+                .expectNext(credit)
+                .verifyComplete();
+    }
+
+    @Test
+    public void testCreateCredit_InvalidCustomerType() {
+        Credit credit = new Credit();
+        credit.setCustomerId("12345");
+        CustomerDTO customer = new CustomerDTO();
+        customer.setType("INVALID");
+
+        when(customerClient.getCustomerById(credit.getCustomerId())).thenReturn(Mono.just(customer));
+
+        Mono<Credit> result = creditService.createCredit(credit);
+
+        StepVerifier.create(result)
+                .expectError(RuntimeException.class)
+                .verify();
+    }
 
     @Test
     void testUpdateCredit_Success() {
@@ -235,4 +320,6 @@ class CreditServiceImplTest {
 
         verify(creditRepository).findByCustomerId("123");
     }
+
+
 }
